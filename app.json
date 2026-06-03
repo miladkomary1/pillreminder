@@ -1,15 +1,20 @@
 {
   "expo": {
-    "name": "i-want-to-make-an-app",
-    "slug": "i-want-to-make-an-app",
+    "name": "Night Dose",
+    "slug": "night-dose",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.personal.nightdose"
     },
     "android": {
+      "package": "com.personal.nightdose",
+      "permissions": [
+        "SCHEDULE_EXACT_ALARM"
+      ],
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
         "foregroundImage": "./assets/android-icon-foreground.png",
@@ -20,6 +25,15 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      [
+        "expo-notifications",
+        {
+          "color": "#14B8A6"
+        }
+      ],
+      "@react-native-community/datetimepicker"
+    ]
   }
 }
